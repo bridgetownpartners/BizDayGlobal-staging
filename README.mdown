@@ -2,6 +2,6 @@ Staging site for BizDayGlobal
 ===
 
 Notes...
-* URL = [https://BizDayGlobal.com](https://BizDayGlobal.com)
+* URL = [https://staging.BizDayGlobal.com](https://staging.BizDayGlobal.com)
 * All files in this repo are subject to change _except_ for `CNAME`. HTTP Header Redirection needs the contents of `CNAME` in order to work correctly.
 
