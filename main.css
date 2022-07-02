@@ -622,32 +622,44 @@ body {
     padding: 0;
   }
 }
+.biz-day__phrase-wrapper {
+  align-items: center;
+  background-color: #F9F9F9;
+  display: flex;
+  margin: 10px 0;
+}
 .biz-day__phrase {
   flex: 1;
-  height: 220px;
-  min-width: 410px;
-  padding: 0 85px;
+  padding: 20px 45px;
 }
 .biz-day__phrase:last-of-type {
   height: auto;
 }
-/* .biz-day-section__container .biz-day-section__wrapper .biz-day-content__wrapper .biz-day__phrase:after, .biz-day-section__container .biz-day-section__wrapper .biz-day-card__wrapper .biz-day__phrase:after {
-  background-color: #000;
-  content: "";
-  display: block;
-  height: 1px;
-  margin: 30px auto;
-  width: 67px;
-} */
 .biz-day-content__wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 130px 0;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 130px 50px;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .biz-day-content__wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
+@media only screen and (max-width: 600px) {
+  .biz-day-content__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .biz-day-section__media-container {
+    flex-direction: column;
+  }
+}
+.biz-day__phrase-wrapper:last-of-type {
+  grid-column: 2;
+}
 .biz-day-section__container .biz-day-section__wrapper .biz-day-content__wrapper .biz-day__phrase:last-of-type:after, .biz-day-section__container .biz-day-section__wrapper .biz-day-card__wrapper .biz-day__phrase:last-of-type:after {
   display: none;
 }
@@ -811,9 +823,31 @@ body {
   width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+  .biz-day-section__media-container {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .biz-day__heading-wrapper {
     margin-bottom: 30px;
+  }
+
+  .biz-day-section__media-item:first-of-type {
+    margin: 0 0 50px 0;
+  }
+
+  .biz-day-section__media-item:first-of-type iframe {
+    height: 450px;
+  }
+
+  .biz-day-section__media-item:last-of-type {
+    margin: 0;
+  }
+
+  .biz-day-section__container {
+    top: 0;
   }
 }
 
