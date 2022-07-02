@@ -126,6 +126,12 @@ body {
   font-weight: normal;
   line-height: 1.6;
 }
+.biz-day-hero__wrapper .biz-day__explained-wrapper .biz-day__explained-sub-title a {
+  color: #fff;
+}
+.biz-day-hero__wrapper .biz-day__explained-wrapper .biz-day__explained-sub-title a:visited {
+  color: #fff;
+}
 @media only screen and (max-width: 600px) {
   .biz-day-hero__wrapper .biz-day__explained-wrapper .biz-day__explained-sub-title {
     font-size: 14px;
