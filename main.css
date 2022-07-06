@@ -817,6 +817,24 @@ body {
   height: 448px;
 }
 
+.biz-day-section__media-item--centered iframe {
+  border-radius: 10px;
+  width: 660px;
+}
+
+.biz-day-section__media-item--centered {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .biz-day-section__media-item--centered iframe {
+    width: 100%;
+  }
+  .biz-day-section__media-item--centered {
+    padding: 0 30px;
+  }
+}
+
 .biz-day-section__media-item:first-of-type {
   margin-right: 30px;
 }
