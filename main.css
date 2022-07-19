@@ -77,8 +77,8 @@ body {
   }
 }
 .biz-day-hero__wrapper .biz-day__title-wrapper .biz-day__sub-title {
-  font-size: 30px;
-  font-weight: normal;
+  font-size: 32px;
+  font-weight: 400;
   line-height: 1.3;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -209,11 +209,11 @@ body {
 }
 
 .biz-day-la__towers-wrapper {
-  bottom: 160px;
+  bottom: 180px;
   position: absolute;
   right: 0;
   overflow: hidden;
-  width: 100%;
+  width: 75%;
 }
 @media only screen and (max-width: 600px) {
   .biz-day-la__towers-wrapper {
@@ -573,7 +573,7 @@ body {
 .biz-day-section__container {
   height: auto;
   position: relative;
-  top: -100px;
+  top: -150px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -711,7 +711,7 @@ body {
 }
 
 .biz-day-content__container--not-full-height {
-  height: 100%;
+  height: 80%;
   position: relative;
 }
 @media screen and (max-width: 600px) {
@@ -796,8 +796,8 @@ body {
 }
 
 .biz-day-footer__wrapper {
-  background-color: #011134;
-  color: #fff;
+  background-color: #F4F4F4;
+  color: #0D1322;
   height: auto;
   text-align: center;
   padding: 50px;
@@ -807,7 +807,10 @@ body {
 .biz-day-section__media-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   padding: 0 48px;
+  max-width: 815px;
+  margin: 0 auto;
 }
 
 .biz-day-section__media-item {
@@ -877,7 +880,57 @@ body {
 }
 
 .biz-day__copy-right {
-  margin-top: 30px;
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  font-size: 12px;
+  height: 130px;
+  padding: 0 90px;
+  width: 100%;
+}
+
+.biz-day__copy-right span {
+  flex: 1;
+}
+
+.biz-day__copy-right span:nth-of-type(2) {
+  text-align: right;
+}
+
+.biz-day-section__socials-container {
+  display: flex;
+  justify-content: center;
+  margin: 80px auto 40px;
+  width: 50vw;
+}
+
+.biz-day-section__socials-wrapper {
+  text-align: center;
+}
+
+.biz-day-section__socials-icons-wrapper {
+  display: flex;
+  margin-top: 25px;
+}
+
+.biz-day-section__socials-icon:nth-of-type(1) {
+  margin-right: 20px
+}
+
+.biz-day-section__socials-icon:nth-of-type(2) {
+  margin-left: 20px
+}
+
+.biz-day-section__full-socials-wrapper {
+  margin: 50px 0;
+}
+
+.biz-day-section__full-socials-wrapper .biz-day__socials-icon:nth-of-type(2) {
+  display: inline-block;
+  margin: 0 30px;
+  position: relative;
+  top: 5px;
 }
 
 @keyframes float {
