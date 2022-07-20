@@ -452,13 +452,6 @@ body {
   width: 114px;
   z-index: 1;
 }
-@media only screen and (max-width: 600px) {
-  .cloud-container .cloud:nth-of-type(3) {
-    bottom: 350px;
-    right: 0;
-    width: 58px;
-  }
-}
 @media (min-width: 768px) and (max-width: 1024px) {
   .cloud-container .cloud:nth-of-type(3) {
     bottom: 350px;
@@ -473,7 +466,13 @@ body {
     width: 95px;
   }
 }
-
+@media only screen and (max-width: 600px) {
+  .cloud-container .cloud:nth-of-type(3) {
+    bottom: 350px;
+    right: 0;
+    width: 58px;
+  }
+}
 .drone-container {
   right: 70px;
   position: absolute;
@@ -718,7 +717,7 @@ body {
 }
 @media screen and (max-width: 600px) {
   .biz-day-content__container--not-full-height {
-    height: 95%;
+    height: 55%;
   }
 }
 .biz-day-content__container--not-full-height .biz-day__socials-two-container {
@@ -959,7 +958,7 @@ body {
   }
 
   .biz-day-footer__wrapper {
-    padding: 50px;
+    padding: 25px;
   }
 
   .biz-day__copy-right {
