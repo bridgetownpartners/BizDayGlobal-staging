@@ -168,11 +168,12 @@
             	'Access-Control-Allow-Origin': '*',
           	},
 			success: function (data) {
-				console.log(window.location.host)
-				console.log(window.location.pathname)
-				console.log(window.location)
+				console.log(window.location.host);
+				console.log(window.location.pathname);
+				console.log(window.location);
 				$(data).find("a:contains(" + fileextension + ")").each(function () {
 					var filename = this.href.replace(window.location.host, "").replace(window.location.pathname, "").replace("http://", "");
+					console.log(filename);
 					$("#biz-day-card__wrapper").append(
 						"<div class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ dir + filename +"); background-size: contain; background-repeat: no-repeat; background-position: center center;'></div>"
 					);
