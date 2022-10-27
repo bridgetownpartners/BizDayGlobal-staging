@@ -184,7 +184,7 @@
 						});
 						console.log(slick);
 						if (imageObj.path.includes(fileextension)) {
-							$("#biz-day-card__wrapper").slick('slickAdd',
+							slick.slick('slickAdd',
 								"<div class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ imgDir + encodeURIComponent(imageObj.path) +"); background-size: contain; background-repeat: no-repeat; background-position: center center;'></div>"
 							);
 						}
