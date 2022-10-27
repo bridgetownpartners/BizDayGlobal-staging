@@ -180,11 +180,13 @@
 					);
 				});
 			},
-			error: function (error) {
+			error: function (error, a) {
 				console.log(window.location.host);
 				console.log(window.location.pathname);
 				console.log(window.location);
-				console.log(error);
+				console.log(error)
+				console.log(error.responseText);
+				console.log(a)
 			}
 		});
 	</script>
