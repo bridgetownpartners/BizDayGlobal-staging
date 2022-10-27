@@ -157,7 +157,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<script>
-		// var dir = "./assets/automated-images/";
+		var imgDir = "./assets/automated-images/";
 		// var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/fa8b16247348d7cff4c6e7afb24ea804f42f47b9"; //feat/dynamic-images
 		// var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/c86233cbcfaa3dca42099e9d0a20339b8e75b75d"; // feat/dynamic-images/assets
 		var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/a138149aeebb4499d7ad150f3801647d453ec262"; // feat/dynamic-images/assets/automated-images
@@ -176,13 +176,19 @@
 				console.log(window.location);
 				console.log(data);
 				// http://Edward.dev.github.io/bridgetownpartners/BizDayGlobal-staging/assets/automated-images
-				$(data).find("a:contains(" + fileextension + ")").each(function () {
-					var filename = this.href.replace(window.location.host, "").replace(window.location.pathname, "").replace("https://", "");
-					console.log(filename);
+				// $(data).find("a:contains(" + fileextension + ")").each(function () {
+				// 	var filename = this.href.replace(window.location.host, "").replace(window.location.pathname, "").replace("https://", "");
+				// 	console.log(filename);
+				// 	$("#biz-day-card__wrapper").append(
+				// 		"<div class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ dir + filename +"); background-size: contain; background-repeat: no-repeat; background-position: center center;'></div>"
+				// 	);
+				// });
+
+				data.tree.map((imageObj) => {
 					$("#biz-day-card__wrapper").append(
-						"<div class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ dir + filename +"); background-size: contain; background-repeat: no-repeat; background-position: center center;'></div>"
+						"<div class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ imageObj.url +"); background-size: contain; background-repeat: no-repeat; background-position: center center;'></div>"
 					);
-				});
+				})
 			},
 			error: function (error, a) {
 				console.log(window.location.host);
