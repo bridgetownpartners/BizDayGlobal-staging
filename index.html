@@ -8,7 +8,6 @@
 		<link rel="icon" type="image/png" href="favicon.ico"/>
 		<link rel="stylesheet" href="./main.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<meta http-equiv="content-security-policy" content="default-src 'self'" url="http://Edward.dev.github.io/bridgetownpartners/BizDayGlobal-staging/assets/automated-images" />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
 			rel="stylesheet">
 		<meta name='description' content='BizDayGlobal is the video podcast for business enthusiasts. Created in the USA. Connected with the world. Produced by Bridgetown Partners and RayHightower.com.'>
@@ -172,8 +171,9 @@
 				console.log(window.location.host);
 				console.log(window.location.pathname);
 				console.log(window.location);
+				// http://Edward.dev.github.io/bridgetownpartners/BizDayGlobal-staging/assets/automated-images
 				$(data).find("a:contains(" + fileextension + ")").each(function () {
-					var filename = this.href.replace(window.location.host, "").replace(window.location.pathname, "").replace("http://", "");
+					var filename = this.href.replace(window.location.host, "").replace(window.location.pathname, "").replace("https://", "");
 					console.log(filename);
 					$("#biz-day-card__wrapper").append(
 						"<div class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ dir + filename +"); background-size: contain; background-repeat: no-repeat; background-position: center center;'></div>"
