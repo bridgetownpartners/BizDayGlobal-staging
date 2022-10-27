@@ -175,19 +175,18 @@
 				success: function (data) {
 					console.log(data);
 					data.tree.map((imageObj) => {
+						$('#biz-day-card__wrapper').slick({
+							infinite: false,
+							dots: true,
+							speed: 500,
+							slidesToShow: 2,
+							slidesToScroll: 2
+						});
 						if (imageObj.path.includes(fileextension)) {
-							$("#biz-day-card__wrapper").append(
+							$("#biz-day-card__wrapper").slick('slickAdd',
 								"<div class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ imgDir + encodeURIComponent(imageObj.path) +"); background-size: contain; background-repeat: no-repeat; background-position: center center;'></div>"
 							);
 						}
-					});
-
-					$('#biz-day-card__wrapper').slick({
-  						infinite: false,
-						dots: true,
-  						speed: 500,
-						slidesToShow: 2,
-						slidesToScroll: 2
 					});
 				},
 				error: function (error, a) {
