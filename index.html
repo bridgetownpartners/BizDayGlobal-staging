@@ -109,7 +109,7 @@
 					</h3>
 				</div>
 
-				<div class="biz-day-card__wrapper" id="biz-day-card__wrapper" data-slick='{"slidesToShow": 2, "slidesToScroll": 1}'></div>
+				<div class="biz-day-card__wrapper" id="biz-day-card__wrapper"></div>
 
 				<div class="biz-day__heading-wrapper biz-day-section__full-socials-wrapper">
 					<a class="biz-day__socials-icon" target="_blank" href="https://www.youtube.com/channel/UCq5FcFOCydTmbeYD60qiEsw">
@@ -182,7 +182,9 @@
 
 					$('#biz-day-card__wrapper').slick({
   						dots: true,
-  						speed: 500
+  						speed: 500,
+						slidesToShow: 2,
+						slidesToScroll: 1
 					});
 				},
 				error: function (error, a) {
