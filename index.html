@@ -172,6 +172,7 @@
 				console.log(window.location.host);
 				console.log(window.location.pathname);
 				console.log(window.location);
+				console.log(data);
 				// http://Edward.dev.github.io/bridgetownpartners/BizDayGlobal-staging/assets/automated-images
 				$(data).find("a:contains(" + fileextension + ")").each(function () {
 					var filename = this.href.replace(window.location.host, "").replace(window.location.pathname, "").replace("https://", "");
