@@ -1101,9 +1101,14 @@ body {
 .slick-dots {
   text-align: center;
 }
+
 .slick-dots li {
     display: none;
   margin: 0 5px;
+}
+
+.slick-list {
+  margin: 0 50px;
 }
 
 @keyframes float {
