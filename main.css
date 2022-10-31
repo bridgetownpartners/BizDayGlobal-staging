@@ -737,6 +737,7 @@ body {
   margin: 0 auto;
   max-width: 900px;
   padding: 50px 0;
+  height: 340px;
 }
 
 .biz-day-section__container .biz-day-section__wrapper .biz-day-card__wrapper .bizday_card_topic {
@@ -1046,6 +1047,18 @@ body {
 
 .biz-day__heading-wrapper p {
   font-size: 20px;
+}
+
+.slick-list {
+  height: 100%;
+  width: 100%;
+}
+
+.slick-arrow {
+  background-color: #043863;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
 }
 
 @media (max-width: 600px) and (min-width: 321px) {
