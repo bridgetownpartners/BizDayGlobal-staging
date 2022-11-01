@@ -157,7 +157,8 @@
 		</div>
 		
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+		<script type='text/javascript' src='config.js'></script>
+		<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script> -->
 		<script>
 			// var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/fa8b16247348d7cff4c6e7afb24ea804f42f47b9"; //feat/dynamic-images
 			// var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/c86233cbcfaa3dca42099e9d0a20339b8e75b75d"; // feat/dynamic-images/assets
@@ -173,23 +174,26 @@
 				type: 'GET',
 				secure: true,
 				beforeSend: function(xhr) {
+					// xhr.setRequestHeader("Authorization", config.SECRET_KEY)
 					xhr.setRequestHeader("Authorization", "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")
 				},
 				success: function (data) {
-					var slick = $('#biz-day-card__wrapper').slick({
-						infinite: false,
-						dots: false,
-						speed: 500,
-						slidesToShow: 2,
-						slidesToScroll: 2,
-						centerMode: false,
-  						focusOnSelect: false
-					});
+					// var slick = $('#biz-day-card__wrapper').slick({
+					// 	infinite: false,
+					// 	dots: false,
+					// 	speed: 500,
+					// 	slidesToShow: 2,
+					// 	slidesToScroll: 2,
+					// 	centerMode: false,
+  					// 	focusOnSelect: false
+					// });
 					data.tree.map((imageObj) => {
 						if (imageObj.path.includes(fileextension)) {
-							$(slick).slick('slickAdd',
+							// $(slick).slick('slickAdd',
+							$('#biz-day-card__wrapper').append(
 								"<a href='" + redirectUrl + "' target='_blank' class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ imgDir + encodeURIComponent(imageObj.path) +"); background-size: cover; background-repeat: no-repeat; background-position: center center;'></a>"
 							);
+							// );
 						}
 					});
 				},
