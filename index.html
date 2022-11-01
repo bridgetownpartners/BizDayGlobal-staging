@@ -164,9 +164,10 @@
 			// var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/fa8b16247348d7cff4c6e7afb24ea804f42f47b9"; //feat/dynamic-images
 			// var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/c86233cbcfaa3dca42099e9d0a20339b8e75b75d"; // feat/dynamic-images/assets
 			var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/a138149aeebb4499d7ad150f3801647d453ec262"; // feat/dynamic-images/assets/automated-images
+			var proxyUrl = `https://cors-anywhere.herokuapp.com/${dir}`;
 			var fileextension = ".png";
 			$.ajax({
-				url: dir,
+				url: proxyUrl,
 				cors: true,
 				type: 'GET',
 				secure: true,
@@ -174,7 +175,6 @@
 					'Access-Control-Allow-Origin': '*',
 				},
 				success: function (data) {
-					console.log(data);
 					var slick = $('#biz-day-card__wrapper').slick({
 						infinite: false,
 						dots: false,
