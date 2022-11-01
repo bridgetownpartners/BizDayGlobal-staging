@@ -159,13 +159,14 @@
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 		<script>
-			var arrLinks = [];
-			var imgDir = "./assets/automated-images/";
 			// var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/fa8b16247348d7cff4c6e7afb24ea804f42f47b9"; //feat/dynamic-images
 			// var dir = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/c86233cbcfaa3dca42099e9d0a20339b8e75b75d"; // feat/dynamic-images/assets
+
+			var redirectUrl = "https://www.youtube.com/c/BizDayGlobal/videos";
+			var imgDir = "./assets/automated-images/";
 			var url = "https://api.github.com/repos/bridgetownpartners/BizDayGlobal-staging/git/trees/a138149aeebb4499d7ad150f3801647d453ec262"; // feat/dynamic-images/assets/automated-images
-			// var proxyUrl = `https://cors-anywhere.herokuapp.com/${url}`;
 			var fileextension = ".png";
+
 			$.ajax({
 				url: url,
 				cors: true,
@@ -187,7 +188,7 @@
 					data.tree.map((imageObj) => {
 						if (imageObj.path.includes(fileextension)) {
 							$(slick).slick('slickAdd',
-								"<div class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ imgDir + encodeURIComponent(imageObj.path) +"); background-size: cover; background-repeat: no-repeat; background-position: center center;'></div>"
+								"<a href='" + redirectUrl + "' target='_blank' class='bizday_card_topic bizday_card_topic--has-image' style='background-image: url("+ imgDir + encodeURIComponent(imageObj.path) +"); background-size: cover; background-repeat: no-repeat; background-position: center center;'></a>"
 							);
 						}
 					});
