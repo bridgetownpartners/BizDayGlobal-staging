@@ -764,6 +764,11 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 400px) {
+  .biz-day-section__container .biz-day-section__wrapper .biz-day-card__wrapper .bizday_card_topic {
+    height: 260px;
+  }
+}
 .biz-day-section__container .biz-day-section__wrapper .biz-day-card__wrapper .bizday_card_topic .bizday_card_topic_image {
   height: 4rem;
   width: 4rem;
