@@ -742,8 +742,8 @@ body {
 
 .biz-day-section__container .biz-day-section__wrapper .biz-day-card__wrapper .bizday_card_topic {
   list-style-type: none;
-  min-height: 150px;
-  min-width: 180px;
+  min-height: 210px;
+  min-width: 250px;
   text-align: left;
   margin: 10px;
   box-shadow: 10px 8px 16px -13px rgba(0,0,0,0.61);
